@@ -1,0 +1,11 @@
+release/accueilwindow.o
+release/booksinterface.o
+release/creeCompte.o
+release/main.o
+release/mainwindow.o
+release/motDePasse.o
+release/moc_accueilwindow.o
+release/moc_booksinterface.o
+release/moc_creeCompte.o
+release/moc_mainwindow.o
+release/moc_motDePasse.o
