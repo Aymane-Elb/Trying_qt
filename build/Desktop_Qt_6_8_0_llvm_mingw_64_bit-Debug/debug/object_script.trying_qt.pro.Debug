@@ -4,6 +4,7 @@ debug/creeCompte.o
 debug/main.o
 debug/mainwindow.o
 debug/motDePasse.o
+debug/qrc_images.o
 debug/moc_accueilwindow.o
 debug/moc_booksinterface.o
 debug/moc_creeCompte.o

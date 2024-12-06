@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../Downloads/Design sans titre.png</file>
+    </qresource>
+</RCC>
