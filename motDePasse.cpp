@@ -1,6 +1,5 @@
 #include "motDePasse.h"
 #include "ui_motDePasse.h"
-#include "mainwindow.h"
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialog)
