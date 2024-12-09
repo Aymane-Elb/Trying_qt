@@ -32,7 +32,6 @@ public:
     QAction *actionRecherche_De_Livres;
     QAction *actionRecherche_D_articles;
     QWidget *centralwidget;
-    QLabel *parametrederecherchLink;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_4;
     QLabel *sidentifierLink;
@@ -55,21 +54,22 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QPushButton *livreBtn;
     QPushButton *articleBtn;
-    QLabel *soustitreLabel;
+    QLabel *picLabel;
     QWidget *layoutWidget3;
+    QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_2;
     QLineEdit *lineEdit;
     QPushButton *rechercheBtn;
-    QLabel *picLabel;
+    QLabel *parametrederecherchLink;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *AccueilWindow)
     {
         if (AccueilWindow->objectName().isEmpty())
             AccueilWindow->setObjectName("AccueilWindow");
-        AccueilWindow->resize(800, 800);
+        AccueilWindow->resize(959, 800);
         AccueilWindow->setMinimumSize(QSize(800, 800));
-        AccueilWindow->setMaximumSize(QSize(2000, 2000));
+        AccueilWindow->setMaximumSize(QSize(959, 800));
         AccueilWindow->setCursor(QCursor(Qt::CursorShape::ArrowCursor));
         AccueilWindow->setStyleSheet(QString::fromUtf8("background-color: white;"));
         actionRecherche_De_Livres = new QAction(AccueilWindow);
@@ -86,25 +86,9 @@ public:
         actionRecherche_D_articles->setFont(font);
         centralwidget = new QWidget(AccueilWindow);
         centralwidget->setObjectName("centralwidget");
-        parametrederecherchLink = new QLabel(centralwidget);
-        parametrederecherchLink->setObjectName("parametrederecherchLink");
-        parametrederecherchLink->setGeometry(QRect(80, 270, 167, 17));
-        parametrederecherchLink->setMaximumSize(QSize(200, 30));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Arial")});
-        font1.setPointSize(11);
-        font1.setUnderline(true);
-        parametrederecherchLink->setFont(font1);
-        parametrederecherchLink->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        parametrederecherchLink->setStyleSheet(QString::fromUtf8("QLabel{color:rgb(85, 166, 217);\n"
-"text-decoration :  underline dotted #656559;}\n"
-"QLabel:hover{color:rgb(0, 255, 127);\n"
-"text-decoration :  underline dotted black;}\n"
-""));
-        parametrederecherchLink->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(590, 0, 201, 51));
+        layoutWidget->setGeometry(QRect(750, 0, 201, 51));
         horizontalLayout_4 = new QHBoxLayout(layoutWidget);
         horizontalLayout_4->setSpacing(12);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
@@ -113,11 +97,11 @@ public:
         sidentifierLink = new QLabel(layoutWidget);
         sidentifierLink->setObjectName("sidentifierLink");
         sidentifierLink->setMaximumSize(QSize(100, 40));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Arial")});
-        font2.setPointSize(15);
-        font2.setUnderline(true);
-        sidentifierLink->setFont(font2);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Arial")});
+        font1.setPointSize(15);
+        font1.setUnderline(true);
+        sidentifierLink->setFont(font1);
         sidentifierLink->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         sidentifierLink->setStyleSheet(QString::fromUtf8("QLabel{color: rgb(85, 166, 217);}\n"
 "QLabel:hover	{	\n"
@@ -146,20 +130,24 @@ public:
         addBookBtn = new QPushButton(layoutWidget);
         addBookBtn->setObjectName("addBookBtn");
         addBookBtn->setMaximumSize(QSize(30, 30));
-        QFont font3;
-        font3.setPointSize(14);
-        addBookBtn->setFont(font3);
+        QFont font2;
+        font2.setPointSize(14);
+        addBookBtn->setFont(font2);
         addBookBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         addBookBtn->setContextMenuPolicy(Qt::ContextMenuPolicy::PreventContextMenu);
+        addBookBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 127);"));
         QIcon icon1(QIcon::fromTheme(QString::fromUtf8("mail-message-new")));
         addBookBtn->setIcon(icon1);
         addBookBtn->setIconSize(QSize(30, 20));
 
         horizontalLayout_4->addWidget(addBookBtn);
 
+        darkmodeBtn->raise();
+        addBookBtn->raise();
+        sidentifierLink->raise();
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(9, 310, 781, 461));
+        layoutWidget1->setGeometry(QRect(10, 360, 941, 411));
         verticalLayout_4 = new QVBoxLayout(layoutWidget1);
         verticalLayout_4->setObjectName("verticalLayout_4");
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -230,19 +218,19 @@ public:
         livreBtn = new QPushButton(layoutWidget2);
         livreBtn->setObjectName("livreBtn");
         livreBtn->setMaximumSize(QSize(150, 40));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Arial")});
-        font4.setPointSize(14);
-        font4.setBold(true);
-        font4.setItalic(false);
-        livreBtn->setFont(font4);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Arial")});
+        font3.setPointSize(14);
+        font3.setBold(true);
+        font3.setItalic(false);
+        livreBtn->setFont(font3);
         livreBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         livreBtn->setStyleSheet(QString::fromUtf8("QPushButton{color: white;\n"
 "	font: 14pt \"Arial\";\n"
 "font-weight: bold;\n"
 "background-color: rgb(85, 166, 217);\n"
 "border-radius: 0px;\n"
-"border: 2px solid white;\n"
+"border: 1px solid white;\n"
 "border-radius: 6px;}\n"
 "QPushButton:hover{\n"
 "background-color: rgb(85, 158, 217);\n"
@@ -254,13 +242,13 @@ public:
         articleBtn = new QPushButton(layoutWidget2);
         articleBtn->setObjectName("articleBtn");
         articleBtn->setMaximumSize(QSize(150, 40));
-        articleBtn->setFont(font4);
+        articleBtn->setFont(font3);
         articleBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         articleBtn->setStyleSheet(QString::fromUtf8("QPushButton{color: white;\n"
 "	font: 14pt \"Arial\";\n"
 "font-weight: bold;\n"
 "background-color: rgb(0, 236, 114);\n"
-"border: 2px solid white;\n"
+"border: 1px solid white;\n"
 "border-radius: 6px;}\n"
 "QPushButton:hover{\n"
 "background-color: rgb(0, 220, 114);\n"
@@ -269,30 +257,36 @@ public:
 
         horizontalLayout_3->addWidget(articleBtn);
 
-        soustitreLabel = new QLabel(centralwidget);
-        soustitreLabel->setObjectName("soustitreLabel");
-        soustitreLabel->setGeometry(QRect(270, 150, 257, 21));
-        QFont font5;
-        font5.setPointSize(10);
-        font5.setBold(false);
-        soustitreLabel->setFont(font5);
-        soustitreLabel->setStyleSheet(QString::fromUtf8("color:rgb(109, 109, 109);"));
-        soustitreLabel->setAlignment(Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter);
+        picLabel = new QLabel(centralwidget);
+        picLabel->setObjectName("picLabel");
+        picLabel->setGeometry(QRect(360, 0, 221, 201));
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(false);
+        picLabel->setFont(font4);
+        picLabel->setStyleSheet(QString::fromUtf8(""));
+        picLabel->setPixmap(QPixmap(QString::fromUtf8(":/Downloads/Design sans titre.png")));
+        picLabel->setScaledContents(true);
+        picLabel->setAlignment(Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter);
         layoutWidget3 = new QWidget(centralwidget);
         layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(40, 200, 731, 61));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget3);
+        layoutWidget3->setGeometry(QRect(140, 210, 701, 111));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget3);
+        verticalLayout_6->setSpacing(0);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setSizeConstraint(QLayout::SizeConstraint::SetMinimumSize);
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_2->setContentsMargins(-1, 0, 0, 0);
         lineEdit = new QLineEdit(layoutWidget3);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setMaximumSize(QSize(500, 45));
-        QFont font6;
-        font6.setFamilies({QString::fromUtf8("Arial")});
-        font6.setPointSize(14);
-        lineEdit->setFont(font6);
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        font5.setPointSize(14);
+        lineEdit->setFont(font5);
         lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit:hover{\n"
 "color: black;\n"
 "background-color: white;\n"
@@ -306,10 +300,10 @@ public:
         rechercheBtn = new QPushButton(layoutWidget3);
         rechercheBtn->setObjectName("rechercheBtn");
         rechercheBtn->setMaximumSize(QSize(150, 50));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("Arial")});
-        font7.setPointSize(12);
-        rechercheBtn->setFont(font7);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Arial")});
+        font6.setPointSize(12);
+        rechercheBtn->setFont(font6);
         rechercheBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         rechercheBtn->setContextMenuPolicy(Qt::ContextMenuPolicy::DefaultContextMenu);
         rechercheBtn->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
@@ -317,22 +311,33 @@ public:
 
         horizontalLayout_2->addWidget(rechercheBtn);
 
-        picLabel = new QLabel(centralwidget);
-        picLabel->setObjectName("picLabel");
-        picLabel->setGeometry(QRect(250, -40, 261, 231));
-        picLabel->setFont(font5);
-        picLabel->setStyleSheet(QString::fromUtf8(""));
-        picLabel->setPixmap(QPixmap(QString::fromUtf8(":/Downloads/Design sans titre.png")));
-        picLabel->setScaledContents(true);
-        picLabel->setAlignment(Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter);
+
+        verticalLayout_6->addLayout(horizontalLayout_2);
+
+        parametrederecherchLink = new QLabel(layoutWidget3);
+        parametrederecherchLink->setObjectName("parametrederecherchLink");
+        parametrederecherchLink->setMaximumSize(QSize(200, 30));
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Arial")});
+        font7.setPointSize(11);
+        font7.setUnderline(true);
+        parametrederecherchLink->setFont(font7);
+        parametrederecherchLink->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        parametrederecherchLink->setStyleSheet(QString::fromUtf8("QLabel{color:rgb(85, 166, 217);\n"
+"text-decoration :  underline dotted #656559;}\n"
+"QLabel:hover{color:rgb(0, 255, 127);\n"
+"text-decoration :  underline dotted black;}\n"
+""));
+        parametrederecherchLink->setAlignment(Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop);
+
+        verticalLayout_6->addWidget(parametrederecherchLink);
+
         AccueilWindow->setCentralWidget(centralwidget);
         picLabel->raise();
-        parametrederecherchLink->raise();
         layoutWidget2->raise();
         layoutWidget2->raise();
         layoutWidget2->raise();
         layoutWidget2->raise();
-        soustitreLabel->raise();
         statusbar = new QStatusBar(AccueilWindow);
         statusbar->setObjectName("statusbar");
         AccueilWindow->setStatusBar(statusbar);
@@ -349,7 +354,6 @@ public:
         AccueilWindow->setWindowTitle(QCoreApplication::translate("AccueilWindow", "MainWindow", nullptr));
         actionRecherche_De_Livres->setText(QCoreApplication::translate("AccueilWindow", "Recherche De Livres", nullptr));
         actionRecherche_D_articles->setText(QCoreApplication::translate("AccueilWindow", "Recherche D'articles", nullptr));
-        parametrederecherchLink->setText(QCoreApplication::translate("AccueilWindow", "Param\303\250tres de recherche", nullptr));
         sidentifierLink->setText(QCoreApplication::translate("AccueilWindow", "S'identifier", nullptr));
         darkmodeBtn->setText(QString());
         addBookBtn->setText(QString());
@@ -361,10 +365,10 @@ public:
         label_5->setText(QCoreApplication::translate("AccueilWindow", "TextLabel", nullptr));
         livreBtn->setText(QCoreApplication::translate("AccueilWindow", "Livres", nullptr));
         articleBtn->setText(QCoreApplication::translate("AccueilWindow", "Articles", nullptr));
-        soustitreLabel->setText(QCoreApplication::translate("AccueilWindow", "Libre acc\303\250s \303\240 la connaissance et \303\240 la culture.", nullptr));
+        picLabel->setText(QString());
         lineEdit->setPlaceholderText(QCoreApplication::translate("AccueilWindow", "Recherche par titre, auteur, ISBN, \303\251diteur, md5...", nullptr));
         rechercheBtn->setText(QCoreApplication::translate("AccueilWindow", "Recherche", nullptr));
-        picLabel->setText(QString());
+        parametrederecherchLink->setText(QCoreApplication::translate("AccueilWindow", "Param\303\250tres de recherche", nullptr));
     } // retranslateUi
 
 };

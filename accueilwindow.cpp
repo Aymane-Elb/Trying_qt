@@ -1,5 +1,7 @@
 #include "accueilwindow.h"
 #include "ui_accueilwindow.h"
+//#include"mainwindow.h"
+#include<QWidget>
 #include<QPixmap>
 #include<QPalette>
 AccueilWindow::AccueilWindow(QWidget *parent)
@@ -7,9 +9,8 @@ AccueilWindow::AccueilWindow(QWidget *parent)
     , ui(new Ui::AccueilWindow)
 {
     ui->setupUi(this);
-
+    ui->sidentifierLink->setTextInteractionFlags(Qt::TextBrowserInteraction);
 }
-
 AccueilWindow::~AccueilWindow()
 {
     delete ui;
@@ -45,4 +46,10 @@ void AccueilWindow::on_darkmodeBtn_clicked(bool checked)
     }
 }
 
+
+
+/*void AccueilWindow::on_sidentifierLink_linkActivated(const QString &link)
+{
+
+}*/
 

@@ -2,6 +2,8 @@
 #define ACCUEILWINDOW_H
 
 #include <QMainWindow>
+#include<QDialog>
+#include"mainwindow.h"
 namespace Ui {
 class AccueilWindow;
 }
@@ -15,11 +17,14 @@ public:
     ~AccueilWindow();
 
 private slots:
-    void on_darkmodeBtn_clicked(bool checked);
+   void on_darkmodeBtn_clicked(bool checked);
 
+
+    //void on_sidentifierLink_linkActivated(const QString &link);
 
 private:
     Ui::AccueilWindow *ui;
+    MainWindow *H;
 };
 
 #endif // ACCUEILWINDOW_H

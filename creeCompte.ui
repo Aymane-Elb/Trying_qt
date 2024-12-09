@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -131,7 +131,7 @@ padding: 0;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="courrielLine">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -150,7 +150,7 @@ padding: 0;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="motdepasseLine">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -172,7 +172,7 @@ padding: 0;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="surnomLine">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -252,7 +252,7 @@ border: 1px solid #337ab7;
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>

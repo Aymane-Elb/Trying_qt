@@ -2,6 +2,9 @@
 #define CREECOMPTE_H
 
 #include <QDialog>
+#include<QtSql>
+#include<QSqlDatabase>
+#include<QMessageBox>
 #include <QMainWindow>
 namespace Ui {
 class secDialog;
@@ -18,8 +21,11 @@ public:
 private slots:
     void on_pushButton_2_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::secDialog *ui;
+    QSqlDatabase userDatabase;
 };
 
 #endif // CREECOMPTE_H

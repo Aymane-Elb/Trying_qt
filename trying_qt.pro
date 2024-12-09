@@ -1,6 +1,7 @@
 TEMPLATE = app
 TARGET = trying_qt.pro
-QT       += core gui sql
+QT       += core gui
+QT     += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,6 +13,7 @@ CONFIG += c++17
 
 SOURCES += \
     accueilwindow.cpp \
+    addbook.cpp \
     booksinterface.cpp \
     creeCompte.cpp \
     main.cpp \
@@ -20,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     accueilwindow.h \
+    addbook.h \
     booksinterface.h \
     creeCompte.h \
     mainwindow.h \
@@ -27,6 +30,7 @@ HEADERS += \
 
 FORMS += \
     accueilwindow.ui \
+    addbook.ui \
     booksinterface.ui \
     creeCompte.ui \
     mainwindow.ui \
@@ -39,3 +43,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     images.qrc
+
+
+win32: LIBS += -L$$PWD/../../../../../Qt/6.8.0/Src/qtbase/src/plugins/sqldrivers/mysql/ llibmysql
+
+INCLUDEPATH += $$PWD/''
+DEPENDPATH += $$PWD/''
