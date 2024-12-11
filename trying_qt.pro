@@ -1,8 +1,6 @@
 TEMPLATE = app
 TARGET = trying_qt.pro
-QT       += core gui
-QT     += sql
-
+QT       += core gui sql printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -15,6 +13,7 @@ SOURCES += \
     accueilwindow.cpp \
     addbook.cpp \
     booksinterface.cpp \
+    commentaire.cpp \
     creeCompte.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -24,6 +23,7 @@ HEADERS += \
     accueilwindow.h \
     addbook.h \
     booksinterface.h \
+    commentaire.h \
     creeCompte.h \
     mainwindow.h \
     motDePasse.h
@@ -32,6 +32,7 @@ FORMS += \
     accueilwindow.ui \
     addbook.ui \
     booksinterface.ui \
+    commentaire.ui \
     creeCompte.ui \
     mainwindow.ui \
     motDePasse.ui
@@ -45,7 +46,3 @@ RESOURCES += \
     images.qrc
 
 
-win32: LIBS += -L$$PWD/../../../../../Qt/6.8.0/Src/qtbase/src/plugins/sqldrivers/mysql/ llibmysql
-
-INCLUDEPATH += $$PWD/''
-DEPENDPATH += $$PWD/''

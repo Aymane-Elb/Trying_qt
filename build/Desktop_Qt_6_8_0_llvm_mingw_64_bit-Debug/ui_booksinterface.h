@@ -49,7 +49,7 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_5;
     QPushButton *pushButton_7;
-    QPushButton *pushButton_6;
+    QPushButton *printBtn;
     QPushButton *pushButton_3;
     QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_4;
@@ -198,15 +198,15 @@ public:
 
         horizontalLayout->addWidget(pushButton_7);
 
-        pushButton_6 = new QPushButton(layoutWidget1);
-        pushButton_6->setObjectName("pushButton_6");
-        pushButton_6->setMaximumSize(QSize(150, 35));
-        pushButton_6->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton_6->setStyleSheet(QString::fromUtf8("#pushButton_6{background-color: rgb(0, 255, 0);}"));
+        printBtn = new QPushButton(layoutWidget1);
+        printBtn->setObjectName("printBtn");
+        printBtn->setMaximumSize(QSize(150, 35));
+        printBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        printBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 0)"));
         QIcon icon3(QIcon::fromTheme(QIcon::ThemeIcon::DocumentPrint));
-        pushButton_6->setIcon(icon3);
+        printBtn->setIcon(icon3);
 
-        horizontalLayout->addWidget(pushButton_6);
+        horizontalLayout->addWidget(printBtn);
 
         pushButton_3 = new QPushButton(layoutWidget1);
         pushButton_3->setObjectName("pushButton_3");
@@ -220,7 +220,7 @@ public:
         horizontalLayout->addWidget(pushButton_3);
 
         pushButton_3->raise();
-        pushButton_6->raise();
+        printBtn->raise();
         pushButton_7->raise();
         pushButton_5->raise();
         pushButton->raise();
@@ -330,7 +330,7 @@ public:
         pushButton->setText(QCoreApplication::translate("BooksInterface", "Lire ", nullptr));
         pushButton_5->setText(QCoreApplication::translate("BooksInterface", "T\303\251l\303\251charger", nullptr));
         pushButton_7->setText(QCoreApplication::translate("BooksInterface", "Comment", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("BooksInterface", "Print", nullptr));
+        printBtn->setText(QCoreApplication::translate("BooksInterface", "Print", nullptr));
         pushButton_3->setText(QCoreApplication::translate("BooksInterface", "Partager", nullptr));
         label_16->setText(QCoreApplication::translate("BooksInterface", "se connecter", nullptr));
         pushButton_2->setText(QString());

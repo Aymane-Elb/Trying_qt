@@ -15,6 +15,9 @@ public:
     explicit BooksInterface(QWidget *parent = nullptr);
     ~BooksInterface();
 
+private slots:
+    void on_printBtn_clicked();
+
 private:
     Ui::BooksInterface *ui;
 };

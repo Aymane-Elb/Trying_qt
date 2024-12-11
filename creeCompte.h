@@ -25,7 +25,6 @@ private slots:
 
 private:
     Ui::secDialog *ui;
-    QSqlDatabase userDatabase;
 };
 
 #endif // CREECOMPTE_H

@@ -30,16 +30,16 @@ public:
     QLabel *label;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit;
-    QLabel *label_2;
-    QLabel *label_4;
-    QPushButton *pushButton_2;
+    QLineEdit *courrielLineEdit;
+    QLineEdit *passwordLineedit;
+    QLabel *msgMotdepasseLabel;
+    QLabel *msgIncorrectEmailLabel;
+    QPushButton *sidentifierBtn;
     QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
     QLabel *label_3;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton;
+    QPushButton *creeuncompteBtn;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -78,96 +78,96 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setSizeConstraint(QLayout::SizeConstraint::SetDefaultConstraint);
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName("lineEdit_2");
+        courrielLineEdit = new QLineEdit(layoutWidget);
+        courrielLineEdit->setObjectName("courrielLineEdit");
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Arial")});
         font2.setPointSize(18);
         font2.setBold(false);
-        lineEdit_2->setFont(font2);
-        lineEdit_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+        courrielLineEdit->setFont(font2);
+        courrielLineEdit->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: black;\n"
 "\n"
 " "));
 
-        verticalLayout->addWidget(lineEdit_2);
+        verticalLayout->addWidget(courrielLineEdit);
 
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName("lineEdit");
+        passwordLineedit = new QLineEdit(layoutWidget);
+        passwordLineedit->setObjectName("passwordLineedit");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy);
+        sizePolicy.setHeightForWidth(passwordLineedit->sizePolicy().hasHeightForWidth());
+        passwordLineedit->setSizePolicy(sizePolicy);
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Arial")});
         font3.setPointSize(18);
-        lineEdit->setFont(font3);
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+        passwordLineedit->setFont(font3);
+        passwordLineedit->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: black;"));
-        lineEdit->setEchoMode(QLineEdit::EchoMode::Password);
+        passwordLineedit->setEchoMode(QLineEdit::EchoMode::Password);
 
-        verticalLayout->addWidget(lineEdit);
+        verticalLayout->addWidget(passwordLineedit);
 
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName("label_2");
-        label_2->setEnabled(true);
+        msgMotdepasseLabel = new QLabel(layoutWidget);
+        msgMotdepasseLabel->setObjectName("msgMotdepasseLabel");
+        msgMotdepasseLabel->setEnabled(true);
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy1);
-        label_2->setMaximumSize(QSize(400, 20));
+        sizePolicy1.setHeightForWidth(msgMotdepasseLabel->sizePolicy().hasHeightForWidth());
+        msgMotdepasseLabel->setSizePolicy(sizePolicy1);
+        msgMotdepasseLabel->setMaximumSize(QSize(400, 20));
         QFont font4;
         font4.setFamilies({QString::fromUtf8("Arial")});
         font4.setPointSize(9);
         font4.setBold(true);
         font4.setUnderline(true);
         font4.setKerning(false);
-        label_2->setFont(font4);
-        label_2->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        label_2->setLayoutDirection(Qt::LayoutDirection::RightToLeft);
-        label_2->setAutoFillBackground(false);
-        label_2->setStyleSheet(QString::fromUtf8("display: block;\n"
+        msgMotdepasseLabel->setFont(font4);
+        msgMotdepasseLabel->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        msgMotdepasseLabel->setLayoutDirection(Qt::LayoutDirection::RightToLeft);
+        msgMotdepasseLabel->setAutoFillBackground(false);
+        msgMotdepasseLabel->setStyleSheet(QString::fromUtf8("display: block;\n"
 "text-align: left;\n"
 "margin : 0;\n"
 "padding : 0;\n"
 "font-weight: bold;\n"
 "color: rgb(68, 68, 68); "));
-        label_2->setFrameShape(QFrame::Shape::NoFrame);
-        label_2->setTextFormat(Qt::TextFormat::RichText);
-        label_2->setScaledContents(false);
-        label_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-        label_2->setWordWrap(false);
-        label_2->setMargin(-3);
-        label_2->setIndent(10);
-        label_2->setTextInteractionFlags(Qt::TextInteractionFlag::TextBrowserInteraction);
+        msgMotdepasseLabel->setFrameShape(QFrame::Shape::NoFrame);
+        msgMotdepasseLabel->setTextFormat(Qt::TextFormat::RichText);
+        msgMotdepasseLabel->setScaledContents(false);
+        msgMotdepasseLabel->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        msgMotdepasseLabel->setWordWrap(false);
+        msgMotdepasseLabel->setMargin(-3);
+        msgMotdepasseLabel->setIndent(10);
+        msgMotdepasseLabel->setTextInteractionFlags(Qt::TextInteractionFlag::TextBrowserInteraction);
 
-        verticalLayout->addWidget(label_2);
+        verticalLayout->addWidget(msgMotdepasseLabel);
 
-        label_4 = new QLabel(layoutWidget);
-        label_4->setObjectName("label_4");
-        label_4->setMaximumSize(QSize(16777215, 20));
+        msgIncorrectEmailLabel = new QLabel(layoutWidget);
+        msgIncorrectEmailLabel->setObjectName("msgIncorrectEmailLabel");
+        msgIncorrectEmailLabel->setMaximumSize(QSize(16777215, 20));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("Arial")});
         font5.setPointSize(10);
-        label_4->setFont(font5);
-        label_4->setStyleSheet(QString::fromUtf8("color: red;"));
-        label_4->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
+        msgIncorrectEmailLabel->setFont(font5);
+        msgIncorrectEmailLabel->setStyleSheet(QString::fromUtf8("color: red;"));
+        msgIncorrectEmailLabel->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
 
-        verticalLayout->addWidget(label_4);
+        verticalLayout->addWidget(msgIncorrectEmailLabel);
 
-        pushButton_2 = new QPushButton(layoutWidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMaximumSize(QSize(16777215, 35));
+        sidentifierBtn = new QPushButton(layoutWidget);
+        sidentifierBtn->setObjectName("sidentifierBtn");
+        sidentifierBtn->setMaximumSize(QSize(16777215, 35));
         QFont font6;
         font6.setFamilies({QString::fromUtf8("Arial")});
         font6.setPointSize(14);
         font6.setBold(true);
         font6.setItalic(false);
-        pushButton_2->setFont(font6);
-        pushButton_2->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{color: white;\n"
+        sidentifierBtn->setFont(font6);
+        sidentifierBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        sidentifierBtn->setStyleSheet(QString::fromUtf8("QPushButton{color: white;\n"
 "	font: 14pt \"Arial\";\n"
 "font-weight: bold;\n"
 "background-color: rgb(85, 166, 217);\n"
@@ -176,9 +176,9 @@ public:
 "background-color: rgb(85, 158, 217);\n"
 "border: 1px solid #337ab7;\n"
 "}"));
-        pushButton_2->setIconSize(QSize(20, 20));
+        sidentifierBtn->setIconSize(QSize(20, 20));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(sidentifierBtn);
 
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName("layoutWidget1");
@@ -201,22 +201,22 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(layoutWidget1);
-        pushButton->setObjectName("pushButton");
+        creeuncompteBtn = new QPushButton(layoutWidget1);
+        creeuncompteBtn->setObjectName("creeuncompteBtn");
         QSizePolicy sizePolicy2(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Minimum);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy2);
-        pushButton->setMaximumSize(QSize(100, 999));
+        sizePolicy2.setHeightForWidth(creeuncompteBtn->sizePolicy().hasHeightForWidth());
+        creeuncompteBtn->setSizePolicy(sizePolicy2);
+        creeuncompteBtn->setMaximumSize(QSize(100, 999));
         QFont font8;
         font8.setFamilies({QString::fromUtf8("Arial")});
         font8.setPointSize(14);
-        pushButton->setFont(font8);
-        pushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: gray;"));
+        creeuncompteBtn->setFont(font8);
+        creeuncompteBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        creeuncompteBtn->setStyleSheet(QString::fromUtf8("background-color: gray;"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(creeuncompteBtn);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -232,13 +232,13 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "S'identifier", nullptr));
-        lineEdit_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Courriel", nullptr));
-        lineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mot de passe", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", " Vous avez oubli\303\251 votre mot de passe ?", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "Incorrect email or password", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "S'identifier", nullptr));
+        courrielLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Courriel", nullptr));
+        passwordLineedit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mot de passe", nullptr));
+        msgMotdepasseLabel->setText(QCoreApplication::translate("MainWindow", " Vous avez oubli\303\251 votre mot de passe ?", nullptr));
+        msgIncorrectEmailLabel->setText(QString());
+        sidentifierBtn->setText(QCoreApplication::translate("MainWindow", "S'identifier", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Pas encore de compte ?", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Cr\303\251e", nullptr));
+        creeuncompteBtn->setText(QCoreApplication::translate("MainWindow", "Cr\303\251e", nullptr));
     } // retranslateUi
 
 };

@@ -1,5 +1,6 @@
 #include "accueilwindow.h"
 #include "ui_accueilwindow.h"
+#include"addbook.h"
 //#include"mainwindow.h"
 #include<QWidget>
 #include<QPixmap>
@@ -52,4 +53,12 @@ void AccueilWindow::on_darkmodeBtn_clicked(bool checked)
 {
 
 }*/
+
+
+void AccueilWindow::on_addBookBtn_clicked()
+{
+    AddBook h;
+    h.setMouseTracking(true);
+    h.show();
+}
 

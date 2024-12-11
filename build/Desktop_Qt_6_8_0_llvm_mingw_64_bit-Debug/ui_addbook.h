@@ -27,12 +27,12 @@ class Ui_AddBook
 public:
     QWidget *centralwidget;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineEdit;
+    QLineEdit *urllineEdit;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton;
+    QPushButton *parccourriBtn;
+    QPushButton *saveBtn;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *AddBook)
@@ -53,40 +53,40 @@ public:
         label->setCursor(QCursor(Qt::CursorShape::IBeamCursor));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label->setWordWrap(true);
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(65, 118, 661, 191));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(65, 118, 661, 191));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        lineEdit = new QLineEdit(widget);
-        lineEdit->setObjectName("lineEdit");
+        urllineEdit = new QLineEdit(layoutWidget);
+        urllineEdit->setObjectName("urllineEdit");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy);
-        lineEdit->setMaximumSize(QSize(650, 36));
+        sizePolicy.setHeightForWidth(urllineEdit->sizePolicy().hasHeightForWidth());
+        urllineEdit->setSizePolicy(sizePolicy);
+        urllineEdit->setMaximumSize(QSize(650, 36));
 
-        verticalLayout_2->addWidget(lineEdit);
+        verticalLayout_2->addWidget(urllineEdit);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(5);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(230, 9, 0, 60);
-        pushButton_3 = new QPushButton(widget);
-        pushButton_3->setObjectName("pushButton_3");
-        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy);
-        pushButton_3->setMaximumSize(QSize(200, 35));
+        parccourriBtn = new QPushButton(layoutWidget);
+        parccourriBtn->setObjectName("parccourriBtn");
+        sizePolicy.setHeightForWidth(parccourriBtn->sizePolicy().hasHeightForWidth());
+        parccourriBtn->setSizePolicy(sizePolicy);
+        parccourriBtn->setMaximumSize(QSize(200, 35));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Arial")});
         font1.setPointSize(12);
-        pushButton_3->setFont(font1);
-        pushButton_3->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton_3->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        pushButton_3->setAutoFillBackground(false);
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        parccourriBtn->setFont(font1);
+        parccourriBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        parccourriBtn->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        parccourriBtn->setAutoFillBackground(false);
+        parccourriBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(0, 255, 127);\n"
 "color: white;\n"
 "border: 1px solid white;\n"
@@ -97,22 +97,22 @@ public:
 "QPushButton:hover{\n"
 "background-color: rgb(0, 230, 127);}"));
         QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::DocumentOpen));
-        pushButton_3->setIcon(icon);
+        parccourriBtn->setIcon(icon);
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(parccourriBtn);
 
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton");
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
-        pushButton->setMaximumSize(QSize(200, 35));
+        saveBtn = new QPushButton(layoutWidget);
+        saveBtn->setObjectName("saveBtn");
+        sizePolicy.setHeightForWidth(saveBtn->sizePolicy().hasHeightForWidth());
+        saveBtn->setSizePolicy(sizePolicy);
+        saveBtn->setMaximumSize(QSize(200, 35));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Arial")});
         font2.setPointSize(12);
         font2.setBold(true);
-        pushButton->setFont(font2);
-        pushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        saveBtn->setFont(font2);
+        saveBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        saveBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(0, 255, 127);\n"
 "color: white;\n"
 "border: 1px solid white;\n"
@@ -123,19 +123,15 @@ public:
 "QPushButton:hover{\n"
 "background-color: rgb(0, 230, 127);}"));
         QIcon icon1(QIcon::fromTheme(QString::fromUtf8("list-add")));
-        pushButton->setIcon(icon1);
-        pushButton->setIconSize(QSize(25, 25));
+        saveBtn->setIcon(icon1);
+        saveBtn->setIconSize(QSize(25, 25));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(saveBtn);
 
 
         verticalLayout_2->addLayout(verticalLayout);
 
         AddBook->setCentralWidget(centralwidget);
-        label->raise();
-        lineEdit->raise();
-        pushButton_3->raise();
-        widget->raise();
         statusbar = new QStatusBar(AddBook);
         statusbar->setObjectName("statusbar");
         AddBook->setStatusBar(statusbar);
@@ -149,8 +145,8 @@ public:
     {
         AddBook->setWindowTitle(QCoreApplication::translate("AddBook", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("AddBook", "Add your paper books to share them with others.Before adding books to our system you need to Log In", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("AddBook", "Parccourir", nullptr));
-        pushButton->setText(QString());
+        parccourriBtn->setText(QCoreApplication::translate("AddBook", "Parccourir", nullptr));
+        saveBtn->setText(QString());
     } // retranslateUi
 
 };

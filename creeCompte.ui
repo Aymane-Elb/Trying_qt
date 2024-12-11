@@ -208,7 +208,7 @@ padding: 0;</string>
        <string notr="true">color: red;</string>
       </property>
       <property name="text">
-       <string>Les info nécessaires n'ont pas été remplies</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>

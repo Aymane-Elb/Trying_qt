@@ -1,6 +1,7 @@
 debug/accueilwindow.o
 debug/addbook.o
 debug/booksinterface.o
+debug/commentaire.o
 debug/creeCompte.o
 debug/main.o
 debug/mainwindow.o
@@ -9,6 +10,7 @@ debug/qrc_images.o
 debug/moc_accueilwindow.o
 debug/moc_addbook.o
 debug/moc_booksinterface.o
+debug/moc_commentaire.o
 debug/moc_creeCompte.o
 debug/moc_mainwindow.o
 debug/moc_motDePasse.o

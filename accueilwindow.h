@@ -22,7 +22,9 @@ private slots:
 
     //void on_sidentifierLink_linkActivated(const QString &link);
 
-private:
+   void on_addBookBtn_clicked();
+
+   private:
     Ui::AccueilWindow *ui;
     MainWindow *H;
 };

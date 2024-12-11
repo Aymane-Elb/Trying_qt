@@ -254,7 +254,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="printBtn">
        <property name="maximumSize">
         <size>
          <width>150</width>
@@ -265,7 +265,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">#pushButton_6{background-color: rgb(0, 255, 0);}</string>
+        <string notr="true">background-color: rgb(0, 255, 0)</string>
        </property>
        <property name="text">
         <string>Print</string>
@@ -300,7 +300,7 @@
      </item>
     </layout>
     <zorder>pushButton_3</zorder>
-    <zorder>pushButton_6</zorder>
+    <zorder>printBtn</zorder>
     <zorder>pushButton_7</zorder>
     <zorder>pushButton_5</zorder>
     <zorder>pushButton</zorder>

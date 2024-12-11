@@ -191,7 +191,7 @@ public:
         courrielLine->setPlaceholderText(QCoreApplication::translate("secDialog", "Courriel", nullptr));
         motdepasseLine->setPlaceholderText(QCoreApplication::translate("secDialog", "Mot de passe", nullptr));
         surnomLine->setPlaceholderText(QCoreApplication::translate("secDialog", "Surnom", nullptr));
-        label_3->setText(QCoreApplication::translate("secDialog", "Les info n\303\251cessaires n'ont pas \303\251t\303\251 remplies", nullptr));
+        label_3->setText(QString());
         pushButton->setText(QCoreApplication::translate("secDialog", "Cr\303\251er un compte", nullptr));
         label_4->setText(QCoreApplication::translate("secDialog", "On se conna\303\256t d\303\251j\303\240?", nullptr));
         pushButton_2->setText(QCoreApplication::translate("secDialog", "S'identifier", nullptr));

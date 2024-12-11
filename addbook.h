@@ -15,6 +15,9 @@ public:
     explicit AddBook(QWidget *parent = nullptr);
     ~AddBook();
 
+private slots:
+    void on_parccourriBtn_clicked();
+
 private:
     Ui::AddBook *ui;
 };

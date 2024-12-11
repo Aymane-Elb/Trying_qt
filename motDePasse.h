@@ -1,6 +1,6 @@
 #ifndef MOTDEPASSE_H
 #define MOTDEPASSE_H
-
+#include"mainwindow.h"
 #include <QDialog>
 #include <QMainWindow>
 
@@ -20,6 +20,10 @@ private slots:
 
 
     void on_pushButton_2_clicked();
+
+    void on_restaurecompteBtn_clicked();
+
+    void on_sidentifierBtn_clicked();
 
 private:
     Ui::Dialog *ui;

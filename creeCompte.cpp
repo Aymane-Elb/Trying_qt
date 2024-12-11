@@ -1,8 +1,8 @@
 #include "creeCompte.h"
 #include "ui_creeCompte.h"
 #include<QMessageBox>
-#include<QtSql/QSql>
-#include<QtSql/QSqlDatabase>
+#include<QtSql>
+#include<QSqlDatabase>
 secDialog::secDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::secDialog)

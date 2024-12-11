@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="restaurecompteBtn">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -85,7 +85,7 @@ border: 1px solid #337ab7;
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="courrielLine">
       <property name="minimumSize">
        <size>
         <width>400</width>
@@ -104,7 +104,7 @@ border: 1px solid #337ab7;
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="msgmissemailLabel">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -122,7 +122,7 @@ border: 1px solid #337ab7;
        <string notr="true">color:red;</string>
       </property>
       <property name="text">
-       <string>Le champ email est obligatoire</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
@@ -161,7 +161,7 @@ border: 1px solid #337ab7;
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="sidentifierBtn">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
         <horstretch>0</horstretch>
