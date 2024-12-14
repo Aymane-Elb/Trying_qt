@@ -24,35 +24,32 @@ void secDialog::on_pushButton_2_clicked()
 
 void secDialog::on_pushButton_clicked()
 {
-    //connecting to my sql database(user-info)
-    QSqlDatabase userDatabase;
-    userDatabase.setPort(3307);
-    userDatabase = QSqlDatabase::addDatabase("QMYSQL");
-    userDatabase.setHostName("localhost");
-    userDatabase.setUserName("root");
-    userDatabase.setPassword("");
-    userDatabase.setDatabaseName("user-info");
-    if(userDatabase.open())
-    {
-        //retreving data
-        QString courriel = ui->courrielLine->text();
+    // Connecting to the SQLite database
+    QSqlDatabase userDatabase = QSqlDatabase::addDatabase("QSQLITE");
+    userDatabase.setDatabaseName("C:/Users/pc/Downloads/BIBLIO (1).db");
+    if (userDatabase.open()) {
+        // Retrieving data from UI
+        QString Email = ui->courrielLine->text();
         QString password = ui->motdepasseLine->text();
-        QString name = ui->surnomLine->text();
+        QString surNom = ui->surnomLine->text();
+
+        // Preparing the SQL query
         QSqlQuery qry;
-        qry.prepare("INSERT INTO creecompte (Courriel,Password,Surnom)"
-                    "VALUES(:courriel,:password,:name)");
-        qry.bindValue(":courriel",courriel);
-        qry.bindValue(":password",password);
-        qry.bindValue(":name",name);
-        if(qry.exec())
-        {
-            QMessageBox::information(this,"insertion complete","data inserted");
-        }else
-        {
-            QMessageBox::information(this,"insertion not completed","data did not insert");
+        qry.prepare("INSERT INTO Utilisateurs (Email, MotDePasse,surNom) "
+                    "VALUES (:Email, :password, :name)");
+        qry.bindValue(":Email", Email);
+        qry.bindValue(":password", password);
+        qry.bindValue(":name", surNom);
+
+        // Executing the query
+        if (qry.exec()) {
+            QMessageBox::information(nullptr, "Insertion Complete", "Data inserted successfully.");
+        } else {
+            QMessageBox::critical(nullptr, "Insertion Failed", "Failed to insert data.");
         }
-    }else{
-        QMessageBox::information(this,"Not connected","Database is not connected");
+    } else {
+        QMessageBox::critical(nullptr, "Database Connection Failed", "Could not connect to the database.");
     }
+
 }
 

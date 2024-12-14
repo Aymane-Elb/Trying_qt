@@ -1,10 +1,10 @@
-/*#include "mainwindow.h"*/
+/*#include "mainwindow.h"
 #include"accueilwindow.h"
-/*#include"booksinterface.h"*/
+#include"booksinterface.h"
 #include"addbook.h"
-/*#include"creeCompte.h"
+#include"creeCompte.h"*/
 #include"motDePasse.h"
-#include"commentaire.h"*/
+/*#include"commentaire.h"*/
 #include<QPixmap>
 #include<QPushButton>
 #include <QApplication>
@@ -16,18 +16,17 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    qDebug() << QSqlDatabase::drivers();
-    AccueilWindow z;
+    /*AccueilWindow z;
     z.show();
-    /*commentaire e;
-    e.show();
+    commentaire e;
+    e.show();*/
     Dialog y;
     y.show();
-    secDialog h;
-    h.show()*/
+   /* secDialog h;
+    h.show();
     AddBook u;
     u.show();
-    /*BooksInterface n;
+    BooksInterface n;
     n.show();
     MainWindow w;
     w.show();*/

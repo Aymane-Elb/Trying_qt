@@ -67,6 +67,10 @@ public:
         sizePolicy.setHeightForWidth(urllineEdit->sizePolicy().hasHeightForWidth());
         urllineEdit->setSizePolicy(sizePolicy);
         urllineEdit->setMaximumSize(QSize(650, 36));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Arial")});
+        font1.setPointSize(12);
+        urllineEdit->setFont(font1);
 
         verticalLayout_2->addWidget(urllineEdit);
 
@@ -79,9 +83,6 @@ public:
         sizePolicy.setHeightForWidth(parccourriBtn->sizePolicy().hasHeightForWidth());
         parccourriBtn->setSizePolicy(sizePolicy);
         parccourriBtn->setMaximumSize(QSize(200, 35));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Arial")});
-        font1.setPointSize(12);
         parccourriBtn->setFont(font1);
         parccourriBtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         parccourriBtn->setLayoutDirection(Qt::LayoutDirection::LeftToRight);

@@ -16,10 +16,10 @@ BooksInterface::~BooksInterface()
 
 void BooksInterface::on_printBtn_clicked()
 {
-    /*QPrinter func;
+    QPrinter func;
     func.setPrinterName("User");
     QPrintDialog dialog (&func,this);
-    if(dialog.exec()==QDialog::Rejected) return;*/
+    if(dialog.exec()==QDialog::Rejected) return;
 
 
 }

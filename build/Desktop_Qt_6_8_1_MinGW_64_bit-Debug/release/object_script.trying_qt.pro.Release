@@ -1,0 +1,16 @@
+release/accueilwindow.o
+release/addbook.o
+release/booksinterface.o
+release/commentaire.o
+release/creeCompte.o
+release/main.o
+release/mainwindow.o
+release/motDePasse.o
+release/qrc_images.o
+release/moc_accueilwindow.o
+release/moc_addbook.o
+release/moc_booksinterface.o
+release/moc_commentaire.o
+release/moc_creeCompte.o
+release/moc_mainwindow.o
+release/moc_motDePasse.o
