@@ -2,6 +2,11 @@
 #include "ui_mainwindow.h"
 #include"motDePasse.h"
 #include"creeCompte.h"
+#include<QSqlDatabase>
+#include<QSql>
+#include<QSqlQuery>
+#include<QMessageBox>
+#include<QString>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

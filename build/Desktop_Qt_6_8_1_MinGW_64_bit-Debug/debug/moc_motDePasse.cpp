@@ -40,8 +40,8 @@ static constexpr auto qt_meta_stringdata_ZN6DialogE = QtMocHelpers::stringData(
     "Dialog",
     "on_pushButton_2_clicked",
     "",
-    "on_restaurecompteBtn_clicked",
-    "on_sidentifierBtn_clicked"
+    "on_sidentifierBtn_clicked",
+    "on_restaurecompteBtn_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -84,9 +84,9 @@ Q_CONSTINIT const QMetaObject Dialog::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Dialog, std::true_type>,
         // method 'on_pushButton_2_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_restaurecompteBtn_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_sidentifierBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_restaurecompteBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -98,8 +98,8 @@ void Dialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_pushButton_2_clicked(); break;
-        case 1: _t->on_restaurecompteBtn_clicked(); break;
-        case 2: _t->on_sidentifierBtn_clicked(); break;
+        case 1: _t->on_sidentifierBtn_clicked(); break;
+        case 2: _t->on_restaurecompteBtn_clicked(); break;
         default: ;
         }
     }

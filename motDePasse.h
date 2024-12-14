@@ -1,9 +1,14 @@
 #ifndef MOTDEPASSE_H
 #define MOTDEPASSE_H
-#include"mainwindow.h"
+
 #include <QDialog>
 #include <QMainWindow>
-
+#include<QSqlDatabase>
+#include<QSql>
+#include<QSqlQuery>
+#include<QMessageBox>
+#include <QSqlError>
+#include<QString>
 namespace Ui {
 class Dialog;
 }
@@ -21,9 +26,9 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_restaurecompteBtn_clicked();
-
     void on_sidentifierBtn_clicked();
+
+    void on_restaurecompteBtn_clicked();
 
 private:
     Ui::Dialog *ui;

@@ -1,10 +1,5 @@
 #include "motDePasse.h"
 #include "ui_motDePasse.h"
-#include<QSqlDatabase>
-#include<QSql>
-#include<QSqlQuery>
-#include<QMessageBox>
-#include <QSqlError>
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialog)
@@ -21,15 +16,30 @@ void Dialog::on_pushButton_2_clicked(){
     this->destroy(true,true);
 }
 
+void Dialog::on_sidentifierBtn_clicked()
+{
+    this->destroy(true);
+}
+
+
 void Dialog::on_restaurecompteBtn_clicked()
 {
     // Connecting to the SQLite database
     QSqlDatabase userDatabase = QSqlDatabase::addDatabase("QSQLITE");
     userDatabase.setDatabaseName("C:/Users/pc/Downloads/BIBLIO (1).db");
+
     if (userDatabase.open()) {
         // Retrieving data from UI
         QString Email = ui->courrielLine->text();
-        // Preparing the SQL query
+
+        // Check if the email field is empty
+        if (Email.isEmpty()) {
+            ui->msgmissemailLabel->setText("Le champ email est obligatoire");
+            return; // Exit if the email is empty
+        } else {
+            ui->msgmissemailLabel->setText("");
+        }
+
         // Preparing the SQL query to check if the email exists
         QSqlQuery qry;
         qry.prepare("SELECT MotDePasse FROM Utilisateurs WHERE Email = :email");
@@ -49,11 +59,6 @@ void Dialog::on_restaurecompteBtn_clicked()
     } else {
         QMessageBox::critical(nullptr, "Erreur de Connexion", "Impossible de se connecter à la base de données.");
     }
-}
 
-
-void Dialog::on_sidentifierBtn_clicked()
-{
-    this->destroy(true);
 }
 
